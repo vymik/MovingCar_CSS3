@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+	/* border: 1px solid red; */
+}
+
+html{
+    font-size: 16px;
+}
+
+
+html,
+body,
+section {
+    margin: 0 auto;
+}
+
+section{
+    background-image: url("road.png");
+    height: 650px;
+}
+div{
+    position: relative;
+    width: 60%;
+    animation: carMove 5s infinite linear;
+    /* margin-top:150px; */
+}
+
+.car{
+    width: 100%;
+}
+
+.rims1,
+.rims2{
+    position: absolute;
+    animation: roll 5s infinite linear;
+}
+
+.rims1{
+    top: 43%;
+    width: 195px;
+    left: 68px;
+}
+
+.rims2{
+    width: 195px;
+    left: 680px;
+    top: 44%;
+}
+
+@keyframes roll{
+    
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(-1800deg)}
+    100% {transform: rotate(0deg)}
+}
+
+@keyframes carMove {
+    0% {margin-left: 0px}
+    50% {margin-left: 600px}
+    100% {margin-left: 0px}
+}
